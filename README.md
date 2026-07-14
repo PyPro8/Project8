@@ -1,7 +1,4 @@
-# Project 8 — Online Learning Platform (Frontend)
-
-A fully static, frontend-only online learning platform built with **HTML5, CSS3, and Vanilla JavaScript**. No frameworks, no build step, no backend — just open `index.html` in a browser, or drop the folder onto any static host / Flask `static` + `templates` setup later.
-
+# Project 8 — Online Learning Platform 
 ## Structure
 
 ```
@@ -37,10 +34,3 @@ Project-8/
     └── illustrations/
 ```
 
-## Notes
-
-- All data (courses, instructors, assignments, stats) is realistic dummy data, either hard-coded in HTML or rendered client-side via small inline scripts.
-- Every form (login, register, create course, edit profile) is validated and gives feedback via toast notifications — no requests are sent anywhere.
-- Theme preference persists across page loads via `localStorage`.
-- Fully responsive down to small phones (see `responsive.css`).
-- To wire up a real backend (e.g. Flask): replace the inline dummy-data scripts with `fetch()` calls to your API endpoints, and swap `data-redirect` targets on forms with real POST actions.
