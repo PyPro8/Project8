@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Project 8 — Learn Without Limits</title>
+<meta name="description" content="Project 8 is an online learning platform offering expert-led courses in tech, design, business and more.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/course.css">
+<link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+<!-- ===== NAVBAR ===== -->
+<header class="navbar">
+  <div class="container nav-inner">
+    <a href="index.html" class="brand">
+      <span class="brand-mark"><i class="fa-solid fa-bolt"></i></span>
+      <span class="brand-name">Project<span>8</span></span>
+    </a>
+
+    <nav class="nav-links">
+      <a href="index.html" class="active">Home</a>
+      <a href="courses.html">Courses</a>
+      <a href="student-dashboard.html">Dashboard</a>
+      <a href="instructor-dashboard.html">Teach</a>
+      <a href="index.html#testimonials">Reviews</a>
+    </nav>
+
+    <div class="nav-actions">
+      <button class="theme-toggle" aria-label="Toggle dark mode" aria-pressed="false">
+        <i class="fa-solid fa-moon"></i>
+        <i class="fa-solid fa-sun"></i>
+      </button>
+      <a href="login.html" class="btn btn-outline btn-sm">Log In</a>
+      <a href="register.html" class="btn btn-primary btn-sm">Sign Up</a>
+      <button class="hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+
+  <div class="mobile-menu">
+    <ul>
+      <li><a href="index.html" class="active"><i class="fa-solid fa-house"></i> Home</a></li>
+      <li><a href="courses.html"><i class="fa-solid fa-book"></i> Courses</a></li>
+      <li><a href="student-dashboard.html"><i class="fa-solid fa-gauge"></i> Dashboard</a></li>
+      <li><a href="instructor-dashboard.html"><i class="fa-solid fa-chalkboard-user"></i> Teach</a></li>
+      <li><a href="profile.html"><i class="fa-solid fa-user"></i> Profile</a></li>
+    </ul>
+    <div class="mobile-menu-actions">
+      <a href="login.html" class="btn btn-outline btn-block">Log In</a>
+      <a href="register.html" class="btn btn-primary btn-block">Sign Up</a>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <!-- ===== HERO ===== -->
+  <section style="padding-top:156px; padding-bottom:96px; position:relative; overflow:hidden;">
+    <div class="container" style="display:grid; grid-template-columns:1.1fr 0.9fr; gap:48px; align-items:center;">
+      <div>
+        <span class="eyebrow"><i class="fa-solid fa-sparkles"></i> Over 1,200 expert-led courses</span>
+        <h1>Learn skills that move <span class="gradient-text">your career</span> forward</h1>
+        <p style="font-size:1.08rem; max-width:520px; margin-top:18px;">Project 8 connects you with industry practitioners teaching real-world software engineering, design, business and renewable energy skills — at your own pace.</p>
+
+        <div class="flex gap-16 mt-32" style="flex-wrap:wrap;">
+          <a href="courses.html" class="btn btn-primary">Explore Courses <i class="fa-solid fa-arrow-right"></i></a>
+          <a href="register.html" class="btn btn-outline">Become an Instructor</a>
+        </div>
+
+        <div class="flex gap-16 mt-32" style="flex-wrap:wrap; align-items:center;">
+          <div class="flex" style="margin-left:6px;">
+            <img src="https://i.pravatar.cc/40?img=12" alt="" style="width:36px;height:36px;border-radius:50%;border:3px solid var(--bg-base);margin-left:-6px;">
+            <img src="https://i.pravatar.cc/40?img=32" alt="" style="width:36px;height:36px;border-radius:50%;border:3px solid var(--bg-base);margin-left:-6px;">
+            <img src="https://i.pravatar.cc/40?img=45" alt="" style="width:36px;height:36px;border-radius:50%;border:3px solid var(--bg-base);margin-left:-6px;">
+            <img src="https://i.pravatar.cc/40?img=5" alt="" style="width:36px;height:36px;border-radius:50%;border:3px solid var(--bg-base);margin-left:-6px;">
+          </div>
+          <p style="font-size:0.88rem;"><strong style="color:var(--text-primary);">48,000+</strong> learners already growing with us</p>
+        </div>
+      </div>
+
+      <div class="glass-card" style="padding:24px; position:relative;">
+        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=700&q=80" alt="Student learning online" style="border-radius:16px; width:100%; aspect-ratio:4/3; object-fit:cover;">
+        <div class="card" style="position:absolute; bottom:-24px; left:24px; right:24px; padding:16px 20px; display:flex; align-items:center; gap:14px;">
+          <div class="overview-icon icon-teal"><i class="fa-solid fa-chart-line"></i></div>
+          <div>
+            <strong style="display:block; font-size:1rem;">92% completion rate</strong>
+            <span style="font-size:0.78rem; color:var(--text-secondary);">Across all published courses</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FEATURED COURSES ===== -->
+  <section>
+    <div class="container">
+      <div class="dash-section-head section-head" style="max-width:100%;">
+        <div>
+          <span class="eyebrow">Handpicked</span>
+          <h2>Featured Courses</h2>
+        </div>
+        <a href="courses.html" class="see-all">View all <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+
+      <div class="grid-4" id="featuredCoursesGrid"></div>
+    </div>
+  </section>
+
+  <!-- ===== CATEGORIES ===== -->
+  <section style="background:var(--bg-surface-alt);">
+    <div class="container">
+      <div class="section-head center">
+        <span class="eyebrow">Browse</span>
+        <h2>Explore Top Categories</h2>
+        <p>Find the right path across nine in-demand fields, from code to clean energy.</p>
+      </div>
+
+      <div class="grid-4" id="categoryGrid" style="grid-template-columns:repeat(4,1fr);"></div>
+    </div>
+  </section>
+
+  <!-- ===== POPULAR INSTRUCTORS ===== -->
+  <section>
+    <div class="container">
+      <div class="section-head center">
+        <span class="eyebrow">Meet the educators</span>
+        <h2>Learn From Industry Practitioners</h2>
+        <p>Every instructor on Project 8 ships real products before they teach them.</p>
+      </div>
+
+      <div class="grid-4" id="instructorGrid"></div>
+    </div>
+  </section>
+
+  <!-- ===== WHY CHOOSE US ===== -->
+  <section style="background:var(--bg-surface-alt);">
+    <div class="container" style="display:grid; grid-template-columns:0.9fr 1.1fr; gap:56px; align-items:center;">
+      <div>
+        <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?w=700&q=80" alt="Team collaborating" style="border-radius:24px; box-shadow:var(--shadow-lg); aspect-ratio:4/5; object-fit:cover;">
+      </div>
+      <div>
+        <span class="eyebrow">Why Project 8</span>
+        <h2 class="mb-24">Built for learners who ship, not just watch</h2>
+
+        <div style="display:flex; flex-direction:column; gap:20px;">
+          <div class="flex gap-16" style="align-items:flex-start;">
+            <div class="overview-icon icon-pink" style="flex-shrink:0;"><i class="fa-solid fa-code"></i></div>
+            <div><h4 class="mb-8">Project-based curriculum</h4><p>Every course ends in a portfolio-ready build, not just a quiz.</p></div>
+          </div>
+          <div class="flex gap-16" style="align-items:flex-start;">
+            <div class="overview-icon icon-teal" style="flex-shrink:0;"><i class="fa-solid fa-infinity"></i></div>
+            <div><h4 class="mb-8">Lifetime access</h4><p>Revisit lessons anytime — no subscriptions, no expiry dates.</p></div>
+          </div>
+          <div class="flex gap-16" style="align-items:flex-start;">
+            <div class="overview-icon icon-amber" style="flex-shrink:0;"><i class="fa-solid fa-certificate"></i></div>
+            <div><h4 class="mb-8">Verified certificates</h4><p>Share proof of completion directly to LinkedIn in one click.</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== STATISTICS ===== -->
+  <section style="background:linear-gradient(135deg, var(--color-primary-dark), var(--color-primary)); color:#fff;">
+    <div class="container grid-4" style="text-align:center;">
+      <div><strong style="font-size:2.4rem; font-weight:700; display:block;">1,200+</strong><span style="opacity:0.85; font-size:0.9rem;">Courses available</span></div>
+      <div><strong style="font-size:2.4rem; font-weight:700; display:block;">48K+</strong><span style="opacity:0.85; font-size:0.9rem;">Active learners</span></div>
+      <div><strong style="font-size:2.4rem; font-weight:700; display:block;">320+</strong><span style="opacity:0.85; font-size:0.9rem;">Expert instructors</span></div>
+      <div><strong style="font-size:2.4rem; font-weight:700; display:block;">92%</strong><span style="opacity:0.85; font-size:0.9rem;">Completion rate</span></div>
+    </div>
+  </section>
+
+  <!-- ===== TESTIMONIALS ===== -->
+  <section id="testimonials">
+    <div class="container">
+      <div class="section-head center">
+        <span class="eyebrow">Testimonials</span>
+        <h2>Loved by learners worldwide</h2>
+      </div>
+
+      <div data-carousel style="max-width:720px; margin:0 auto; overflow:hidden; position:relative;">
+        <div class="carousel-track" style="display:flex; transition:transform 0.5s var(--ease);">
+
+          <div style="min-width:100%; padding:8px;">
+            <div class="glass-card" style="padding:40px; text-align:center;">
+              <div style="color:var(--color-warning); margin-bottom:16px;"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+              <p style="font-size:1.05rem; color:var(--text-primary); margin-bottom:20px;">"Project 8 helped me transition from customer support into frontend development in four months. The projects felt like real client work."</p>
+              <img src="https://i.pravatar.cc/60?img=32" alt="" style="width:52px;height:52px;border-radius:50%;margin:0 auto 10px;">
+              <strong>Amaka Chukwu</strong>
+              <p style="font-size:0.8rem;">Frontend Developer, Lagos</p>
+            </div>
+          </div>
+
+          <div style="min-width:100%; padding:8px;">
+            <div class="glass-card" style="padding:40px; text-align:center;">
+              <div style="color:var(--color-warning); margin-bottom:16px;"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+              <p style="font-size:1.05rem; color:var(--text-primary); margin-bottom:20px;">"As an instructor, the course builder tools made it painless to structure my renewable energy curriculum into modules students actually finish."</p>
+              <img src="https://i.pravatar.cc/60?img=13" alt="" style="width:52px;height:52px;border-radius:50%;margin:0 auto 10px;">
+              <strong>Tunde Bakare</strong>
+              <p style="font-size:0.8rem;">Solar Systems Engineer</p>
+            </div>
+          </div>
+
+          <div style="min-width:100%; padding:8px;">
+            <div class="glass-card" style="padding:40px; text-align:center;">
+              <div style="color:var(--color-warning); margin-bottom:16px;"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i></div>
+              <p style="font-size:1.05rem; color:var(--text-primary); margin-bottom:20px;">"The progress tracking kept me accountable. Seeing the completion ring fill up was oddly motivating during my UI/UX certificate."</p>
+              <img src="https://i.pravatar.cc/60?img=48" alt="" style="width:52px;height:52px;border-radius:50%;margin:0 auto 10px;">
+              <strong>Grace Ibe</strong>
+              <p style="font-size:0.8rem;">Product Designer, Abuja</p>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="flex items-center justify-between mt-24" style="max-width:200px; margin:24px auto 0;">
+          <button class="carousel-prev icon-btn"><i class="fa-solid fa-chevron-left"></i></button>
+          <div class="carousel-dots" style="display:flex; gap:8px;"></div>
+          <button class="carousel-next icon-btn"><i class="fa-solid fa-chevron-right"></i></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA ===== -->
+  <section>
+    <div class="container">
+      <div class="glass-card" style="padding:64px 48px; text-align:center; background:linear-gradient(135deg, var(--color-primary-dark), var(--color-primary)); border:none;">
+        <h2 style="color:#fff;">Ready to start learning?</h2>
+        <p style="color:rgba(255,255,255,0.85); max-width:480px; margin:14px auto 28px;">Join thousands of learners building real skills with Project 8 today. No credit card required.</p>
+        <a href="register.html" class="btn" style="background:#fff; color:var(--color-primary-dark);">Create Free Account</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ===== FOOTER ===== -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="brand">
+          <span class="brand-mark"><i class="fa-solid fa-bolt"></i></span>
+          <span class="brand-name">Project<span>8</span></span>
+        </a>
+        <p>A modern learning platform for practitioners who want to build, not just watch.</p>
+        <div class="social-row">
+          <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#"><i class="fa-brands fa-twitter"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Platform</h4>
+        <ul>
+          <li><a href="courses.html">Courses</a></li>
+          <li><a href="instructor-dashboard.html">Teach on Project 8</a></li>
+          <li><a href="index.html#testimonials">Reviews</a></li>
+          <li><a href="#">Pricing</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Support</h4>
+        <ul>
+          <li><a href="#">Help Center</a></li>
+          <li><a href="#">Terms of Service</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="404.html">404 Page</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Stay Updated</h4>
+        <p style="font-size:0.85rem;">Get new course drops in your inbox.</p>
+        <form class="newsletter-form" onsubmit="event.preventDefault(); showToast('Subscribed successfully','fa-envelope-circle-check');">
+          <input type="email" placeholder="Your email" required>
+          <button type="submit" class="btn btn-primary btn-sm">Join</button>
+        </form>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span data-year></span> Project 8. All rights reserved.</span>
+      <span>Made for learners everywhere.</span>
+    </div>
+  </div>
+</footer>
+
+<button class="back-to-top" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+<script src="js/theme.js"></script>
+<script src="js/main.js"></script>
+<script>
+  // Dummy data rendered client-side
+  const courses = [
+    { title: "Complete JavaScript: From Zero to Full-Stack", cat: "Development", instructor: "Femi Adeyemi", avatar: "https://i.pravatar.cc/40?img=11", rating: 4.8, reviews: 2140, duration: "32h", level: "Beginner", price: 49900, oldPrice: 79900, img: "https://images.unsplash.com/photo-1517180102446-f3ece451e9d8?w=500&q=80" },
+    { title: "UI/UX Design Fundamentals with Figma", cat: "Design", instructor: "Grace Ibe", avatar: "https://i.pravatar.cc/40?img=48", rating: 4.9, reviews: 1870, duration: "18h", level: "Beginner", price: 39900, oldPrice: 59900, img: "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=500&q=80" },
+    { title: "Solar Power Systems Design & Installation", cat: "Energy", instructor: "Tunde Bakare", avatar: "https://i.pravatar.cc/40?img=13", rating: 4.7, reviews: 640, duration: "24h", level: "Intermediate", price: 59900, oldPrice: null, img: "https://images.unsplash.com/photo-1509391366360-2e959784a276?w=500&q=80" },
+    { title: "Digital Marketing & Growth Strategy", cat: "Business", instructor: "Ifeoma Nwosu", avatar: "https://i.pravatar.cc/40?img=25", rating: 4.6, reviews: 980, duration: "14h", level: "Beginner", price: 34900, oldPrice: 49900, img: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=500&q=80" },
+  ];
+
+  const grid = document.getElementById('featuredCoursesGrid');
+  if (grid) {
+    grid.innerHTML = courses.map(c => `
+      <div class="card course-card">
+        <div class="course-thumb">
+          <img src="${c.img}" alt="${c.title}">
+          <span class="course-badge">${c.cat}</span>
+          <span class="course-level">${c.level}</span>
+        </div>
+        <div class="course-body">
+          <span class="course-cat">${c.cat}</span>
+          <h3 class="course-title">${c.title}</h3>
+          <div class="course-instructor"><img src="${c.avatar}" alt=""> ${c.instructor}</div>
+          <div class="course-meta-row">
+            <span class="course-rating"><i class="fa-solid fa-star"></i> ${c.rating} <span>(${c.reviews})</span></span>
+            <span class="course-duration"><i class="fa-regular fa-clock"></i> ${c.duration}</span>
+          </div>
+          <div class="course-price-row">
+            <span class="course-price">₦${c.price.toLocaleString()}${c.oldPrice ? `<del>₦${c.oldPrice.toLocaleString()}</del>` : ''}</span>
+          </div>
+          <a href="course-details.html" class="btn btn-primary btn-sm btn-block mt-8">View Course</a>
+        </div>
+      </div>
+    `).join('');
+  }
+
+  const categories = [
+    { name: "Development", icon: "fa-code", count: 312 },
+    { name: "Design", icon: "fa-pen-nib", count: 184 },
+    { name: "Business", icon: "fa-briefcase", count: 156 },
+    { name: "Renewable Energy", icon: "fa-solar-panel", count: 92 },
+    { name: "Marketing", icon: "fa-bullhorn", count: 140 },
+    { name: "Data Science", icon: "fa-chart-simple", count: 118 },
+    { name: "Photography", icon: "fa-camera", count: 74 },
+    { name: "Music", icon: "fa-music", count: 61 },
+  ];
+  const catGrid = document.getElementById('categoryGrid');
+  if (catGrid) {
+    catGrid.innerHTML = categories.map(c => `
+      <a href="courses.html" class="card text-center" style="padding:28px 16px;">
+        <div class="overview-icon icon-pink" style="margin:0 auto 14px;"><i class="fa-solid ${c.icon}"></i></div>
+        <h4 style="font-size:0.95rem;">${c.name}</h4>
+        <p style="font-size:0.78rem; margin-top:4px;">${c.count} courses</p>
+      </a>
+    `).join('');
+  }
+
+  const instructors = [
+    { name: "Femi Adeyemi", role: "Full-Stack Engineer", students: "12,400", courses: 8, avatar: "https://i.pravatar.cc/150?img=11" },
+    { name: "Grace Ibe", role: "Product Designer", students: "9,800", courses: 6, avatar: "https://i.pravatar.cc/150?img=48" },
+    { name: "Tunde Bakare", role: "Solar Systems Engineer", students: "5,200", courses: 4, avatar: "https://i.pravatar.cc/150?img=13" },
+    { name: "Ifeoma Nwosu", role: "Growth Marketer", students: "7,100", courses: 5, avatar: "https://i.pravatar.cc/150?img=25" },
+  ];
+  const insGrid = document.getElementById('instructorGrid');
+  if (insGrid) {
+    insGrid.innerHTML = instructors.map(i => `
+      <div class="card text-center" style="padding:32px 20px;">
+        <img src="${i.avatar}" alt="${i.name}" style="width:88px;height:88px;border-radius:50%;object-fit:cover;margin:0 auto 16px;">
+        <h4 style="font-size:1rem;">${i.name}</h4>
+        <p style="font-size:0.82rem; margin-bottom:12px;">${i.role}</p>
+        <div class="flex justify-between" style="font-size:0.78rem; color:var(--text-muted); padding-top:12px; border-top:1px solid var(--border-color);">
+          <span>${i.students} students</span><span>${i.courses} courses</span>
+        </div>
+      </div>
+    `).join('');
+  }
+</script>
+</body>
+</html>

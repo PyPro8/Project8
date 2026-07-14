@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Log In — Project 8</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/auth.css">
+<link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+<div class="auth-page">
+
+  <div class="auth-visual">
+    <div class="auth-visual-top">
+      <span class="brand-mark"><i class="fa-solid fa-bolt"></i></span>
+      <span>Project<span style="opacity:0.85;">8</span></span>
+    </div>
+
+    <div class="auth-visual-mid">
+      <h2>Pick up right where you left off.</h2>
+      <p>Your courses, progress, and certificates are all waiting for you.</p>
+    </div>
+
+    <div>
+      <div class="auth-stats mb-24">
+        <div><strong>1,200+</strong><span>Courses</span></div>
+        <div><strong>48K+</strong><span>Learners</span></div>
+        <div><strong>320+</strong><span>Instructors</span></div>
+      </div>
+      <div class="auth-waveform">
+        <span style="animation-delay:0s"></span><span style="animation-delay:0.1s"></span><span style="animation-delay:0.2s"></span>
+        <span style="animation-delay:0.3s"></span><span style="animation-delay:0.15s"></span><span style="animation-delay:0.25s"></span>
+        <span style="animation-delay:0.05s"></span><span style="animation-delay:0.35s"></span><span style="animation-delay:0.2s"></span>
+        <span style="animation-delay:0.1s"></span><span style="animation-delay:0.3s"></span><span style="animation-delay:0s"></span>
+      </div>
+    </div>
+  </div>
+
+  <div class="auth-form-wrap">
+    <div class="auth-form-box">
+      <a href="index.html" class="mobile-brand">
+        <span class="brand-mark"><i class="fa-solid fa-bolt"></i></span>
+        <span>Project<span style="color:var(--color-primary);">8</span></span>
+      </a>
+
+      <button class="theme-toggle" aria-label="Toggle dark mode" style="position:absolute; top:24px; right:24px;">
+        <i class="fa-solid fa-moon"></i>
+        <i class="fa-solid fa-sun"></i>
+      </button>
+
+      <h1>Welcome back</h1>
+      <p>Log in to continue your learning journey.</p>
+
+      <form data-validate-form data-redirect="student-dashboard.html" novalidate>
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <div class="input-wrap">
+            <i class="fa-solid fa-envelope field-icon"></i>
+            <input type="email" id="email" data-validate="email" required placeholder="you@example.com">
+          </div>
+          <div class="field-error"><i class="fa-solid fa-circle-exclamation"></i><span></span></div>
+        </div>
+
+        <div class="form-group">
+          <label for="password">Password</label>
+          <div class="input-wrap">
+            <i class="fa-solid fa-lock field-icon"></i>
+            <input type="password" id="password" data-validate="password" required placeholder="••••••••">
+            <i class="fa-solid fa-eye toggle-pw"></i>
+          </div>
+          <div class="field-error"><i class="fa-solid fa-circle-exclamation"></i><span></span></div>
+        </div>
+
+        <div class="form-row-inline">
+          <label class="checkbox-wrap">
+            <input type="checkbox"> Remember me
+          </label>
+          <a href="#" class="link-primary">Forgot password?</a>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-block">Log In</button>
+
+        <div class="divider-text">or continue with</div>
+
+        <div class="social-auth">
+          <button type="button" class="social-btn"><i class="fa-brands fa-google"></i> Google</button>
+          <button type="button" class="social-btn"><i class="fa-brands fa-apple"></i> Apple</button>
+        </div>
+      </form>
+
+      <p class="auth-switch">Don't have an account? <a href="register.html" class="link-primary">Sign up free</a></p>
+    </div>
+  </div>
+
+</div>
+
+<script src="js/theme.js"></script>
+<script src="js/main.js"></script>
+<script src="js/validation.js"></script>
+</body>
+</html>

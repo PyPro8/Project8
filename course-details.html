@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Complete JavaScript: Zero to Full-Stack — Project 8</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/course.css">
+<link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+<header class="navbar">
+  <div class="container nav-inner">
+    <a href="index.html" class="brand">
+      <span class="brand-mark"><i class="fa-solid fa-bolt"></i></span>
+      <span class="brand-name">Project<span>8</span></span>
+    </a>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="courses.html" class="active">Courses</a>
+      <a href="student-dashboard.html">Dashboard</a>
+      <a href="instructor-dashboard.html">Teach</a>
+    </nav>
+    <div class="nav-actions">
+      <button class="theme-toggle" aria-label="Toggle dark mode"><i class="fa-solid fa-moon"></i><i class="fa-solid fa-sun"></i></button>
+      <a href="login.html" class="btn btn-outline btn-sm">Log In</a>
+      <a href="register.html" class="btn btn-primary btn-sm">Sign Up</a>
+      <button class="hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+  <div class="mobile-menu">
+    <ul>
+      <li><a href="index.html"><i class="fa-solid fa-house"></i> Home</a></li>
+      <li><a href="courses.html" class="active"><i class="fa-solid fa-book"></i> Courses</a></li>
+      <li><a href="student-dashboard.html"><i class="fa-solid fa-gauge"></i> Dashboard</a></li>
+    </ul>
+    <div class="mobile-menu-actions">
+      <a href="login.html" class="btn btn-outline btn-block">Log In</a>
+      <a href="register.html" class="btn btn-primary btn-block">Sign Up</a>
+    </div>
+  </div>
+</header>
+
+<section class="course-hero">
+  <div class="container">
+    <div class="course-hero-info">
+      <div class="breadcrumb"><a href="index.html">Home</a> <i class="fa-solid fa-chevron-right"></i> <a href="courses.html">Courses</a> <i class="fa-solid fa-chevron-right"></i> <span>JavaScript</span></div>
+      <span class="eyebrow">Development · Beginner</span>
+      <h1>Complete JavaScript: From Zero to Full-Stack</h1>
+      <p>Master modern JavaScript from fundamentals through async programming, then build and deploy a full-stack application with Node.js and Express.</p>
+
+      <div class="hero-meta-row">
+        <span class="course-rating"><i class="fa-solid fa-star"></i> 4.8 (2,140 ratings)</span>
+        <span><i class="fa-solid fa-users"></i> 12,400 students</span>
+        <span><i class="fa-regular fa-clock"></i> 32 hours</span>
+        <span><i class="fa-solid fa-globe"></i> English</span>
+      </div>
+
+      <div class="hero-instructor-chip">
+        <img src="https://i.pravatar.cc/80?img=11" alt="Femi Adeyemi">
+        <div><strong>Femi Adeyemi</strong><span>Full-Stack Engineer &amp; Instructor</span></div>
+      </div>
+    </div>
+
+    <div class="enroll-card">
+      <div class="enroll-card-thumb">
+        <img src="https://images.unsplash.com/photo-1517180102446-f3ece451e9d8?w=700&q=80" alt="Course preview">
+        <div class="play-overlay"><i class="fa-solid fa-play"></i></div>
+      </div>
+      <div class="enroll-card-body">
+        <div class="enroll-price-row">
+          <span class="price">₦49,900</span>
+          <del>₦79,900</del>
+          <span class="discount">37% off</span>
+        </div>
+        <a href="student-dashboard.html" class="btn btn-primary btn-block">Enroll Now</a>
+        <button class="btn btn-outline btn-block mt-8" data-ui-action="Added to wishlist"><i class="fa-regular fa-heart"></i> Add to Wishlist</button>
+
+        <ul class="enroll-includes">
+          <li><i class="fa-solid fa-video"></i> 32 hours on-demand video</li>
+          <li><i class="fa-solid fa-file-lines"></i> 18 downloadable resources</li>
+          <li><i class="fa-solid fa-infinity"></i> Full lifetime access</li>
+          <li><i class="fa-solid fa-mobile-screen"></i> Access on mobile and desktop</li>
+          <li><i class="fa-solid fa-certificate"></i> Certificate of completion</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="container">
+  <div class="course-content-layout">
+
+    <div class="course-main">
+      <div class="course-tabs" data-tabs>
+        <button class="course-tab active" data-tab-btn="overview">Overview</button>
+        <button class="course-tab" data-tab-btn="curriculum">Curriculum</button>
+        <button class="course-tab" data-tab-btn="instructor">Instructor</button>
+        <button class="course-tab" data-tab-btn="reviews">Reviews</button>
+
+        <div class="tab-panel active" data-tab-panel="overview">
+          <h3 class="mb-16">What you'll learn</h3>
+          <div class="grid-2 mb-24">
+            <p style="display:flex; gap:10px;"><i class="fa-solid fa-check" style="color:var(--color-success); margin-top:4px;"></i> Core JavaScript fundamentals and ES6+ syntax</p>
+            <p style="display:flex; gap:10px;"><i class="fa-solid fa-check" style="color:var(--color-success); margin-top:4px;"></i> Asynchronous programming with Promises &amp; async/await</p>
+            <p style="display:flex; gap:10px;"><i class="fa-solid fa-check" style="color:var(--color-success); margin-top:4px;"></i> Building REST APIs with Node.js &amp; Express</p>
+            <p style="display:flex; gap:10px;"><i class="fa-solid fa-check" style="color:var(--color-success); margin-top:4px;"></i> Working with databases and authentication</p>
+            <p style="display:flex; gap:10px;"><i class="fa-solid fa-check" style="color:var(--color-success); margin-top:4px;"></i> Deploying full-stack apps to production</p>
+            <p style="display:flex; gap:10px;"><i class="fa-solid fa-check" style="color:var(--color-success); margin-top:4px;"></i> Debugging and testing JavaScript applications</p>
+          </div>
+          <h3 class="mb-16">Description</h3>
+          <p class="mb-16">This course takes you from JavaScript fundamentals all the way to building and deploying full-stack web applications. You'll write real code in every lesson, working toward a capstone project that you can add directly to your portfolio.</p>
+          <p>Designed for beginners with basic HTML/CSS knowledge, the course builds progressively — each module unlocks a new layer of the stack, from client-side interactivity to server-side APIs.</p>
+
+          <h3 class="mt-32 mb-16">Requirements</h3>
+          <p>• Basic understanding of HTML and CSS</p>
+          <p>• A computer with internet access</p>
+          <p>• No prior programming experience required</p>
+        </div>
+
+        <div class="tab-panel" data-tab-panel="curriculum">
+          <p class="mb-24">6 modules • 84 lessons • 32h total length</p>
+
+          <div class="curriculum-module open">
+            <div class="module-head"><h4>Module 1: JavaScript Foundations</h4><div class="flex items-center gap-8"><span>6 lessons • 2h 40m</span><i class="fa-solid fa-chevron-down chevron"></i></div></div>
+            <div class="module-lessons">
+              <div class="lesson-row"><i class="fa-solid fa-play lesson-icon"></i> Variables, Types &amp; Operators<span class="lesson-dur">18:32</span></div>
+              <div class="lesson-row"><i class="fa-solid fa-play lesson-icon"></i> Functions &amp; Scope<span class="lesson-dur">24:10</span></div>
+              <div class="lesson-row"><i class="fa-solid fa-play lesson-icon"></i> Arrays &amp; Objects<span class="lesson-dur">22:45</span></div>
+            </div>
+          </div>
+
+          <div class="curriculum-module">
+            <div class="module-head"><h4>Module 2: DOM &amp; Events</h4><div class="flex items-center gap-8"><span>10 lessons • 4h 15m</span><i class="fa-solid fa-chevron-down chevron"></i></div></div>
+            <div class="module-lessons">
+              <div class="lesson-row"><i class="fa-solid fa-play lesson-icon"></i> Selecting &amp; Manipulating Elements<span class="lesson-dur">20:14</span></div>
+              <div class="lesson-row"><i class="fa-solid fa-play lesson-icon"></i> Event Listeners in Depth<span class="lesson-dur">26:03</span></div>
+            </div>
+          </div>
+
+          <div class="curriculum-module">
+            <div class="module-head"><h4>Module 3: Asynchronous JavaScript</h4><div class="flex items-center gap-8"><span>12 lessons • 5h 30m</span><i class="fa-solid fa-chevron-down chevron"></i></div></div>
+            <div class="module-lessons">
+              <div class="lesson-row"><i class="fa-solid fa-play lesson-icon"></i> Callbacks &amp; the Event Loop<span class="lesson-dur">19:50</span></div>
+              <div class="lesson-row"><i class="fa-solid fa-play lesson-icon"></i> Promises &amp; Async/Await<span class="lesson-dur">28:22</span></div>
+            </div>
+          </div>
+
+          <div class="curriculum-module">
+            <div class="module-head"><h4>Module 4: Node.js &amp; Express</h4><div class="flex items-center gap-8"><span>14 lessons • 6h 05m</span><i class="fa-solid fa-chevron-down chevron"></i></div></div>
+            <div class="module-lessons">
+              <div class="lesson-row"><i class="fa-solid fa-play lesson-icon"></i> Setting Up an Express Server<span class="lesson-dur">17:40</span></div>
+              <div class="lesson-row"><i class="fa-solid fa-play lesson-icon"></i> Building REST Endpoints<span class="lesson-dur">31:12</span></div>
+            </div>
+          </div>
+
+          <div class="curriculum-module">
+            <div class="module-head"><h4>Module 5: Databases &amp; Auth</h4><div class="flex items-center gap-8"><span>16 lessons • 7h 10m</span><i class="fa-solid fa-chevron-down chevron"></i></div></div>
+            <div class="module-lessons">
+              <div class="lesson-row"><i class="fa-solid fa-play lesson-icon"></i> Connecting to MongoDB<span class="lesson-dur">22:00</span></div>
+              <div class="lesson-row"><i class="fa-solid fa-play lesson-icon"></i> JWT Authentication<span class="lesson-dur">29:45</span></div>
+            </div>
+          </div>
+
+          <div class="curriculum-module">
+            <div class="module-head"><h4>Module 6: Capstone &amp; Deployment</h4><div class="flex items-center gap-8"><span>26 lessons • 6h 20m</span><i class="fa-solid fa-chevron-down chevron"></i></div></div>
+            <div class="module-lessons">
+              <div class="lesson-row"><i class="fa-solid fa-play lesson-icon"></i> Planning the Capstone Project<span class="lesson-dur">15:30</span></div>
+              <div class="lesson-row"><i class="fa-solid fa-play lesson-icon"></i> Deploying to Production<span class="lesson-dur">24:18</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="tab-panel" data-tab-panel="instructor">
+          <div class="instructor-panel">
+            <img src="https://i.pravatar.cc/150?img=11" alt="Femi Adeyemi">
+            <div>
+              <h3>Femi Adeyemi</h3>
+              <p>Full-Stack Engineer &amp; Instructor</p>
+              <div class="instructor-panel-stats">
+                <div><strong>4.8</strong><span>Instructor Rating</span></div>
+                <div><strong>12,400</strong><span>Students</span></div>
+                <div><strong>8</strong><span>Courses</span></div>
+              </div>
+              <p>Femi has spent over a decade building web applications for startups and enterprises across Nigeria. He now teaches full-stack JavaScript development, focused on practical, production-ready skills.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="tab-panel" data-tab-panel="reviews">
+          <div class="flex items-center gap-16 mb-24">
+            <strong style="font-size:2.4rem;">4.8</strong>
+            <div>
+              <div style="color:var(--color-warning);"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i></div>
+              <p style="font-size:0.82rem;">Based on 2,140 ratings</p>
+            </div>
+          </div>
+
+          <div class="review-item">
+            <img src="https://i.pravatar.cc/60?img=32" alt="">
+            <div style="flex:1;">
+              <div class="review-head"><strong>Amaka Chukwu</strong><span class="review-date">2 weeks ago</span></div>
+              <div class="review-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+              <p class="mt-8">Clear explanations and the capstone project tied everything together perfectly. Highly recommend for beginners.</p>
+            </div>
+          </div>
+          <div class="review-item">
+            <img src="https://i.pravatar.cc/60?img=25" alt="">
+            <div style="flex:1;">
+              <div class="review-head"><strong>Ifeoma Nwosu</strong><span class="review-date">1 month ago</span></div>
+              <div class="review-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i></div>
+              <p class="mt-8">Great pacing overall. Would've liked a bit more depth on testing, but still very solid.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <aside class="sidebar-related">
+      <h3 class="mb-16">Related Courses</h3>
+      <a href="course-details.html" class="related-course-mini">
+        <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=200&q=80" alt="">
+        <div><h5>Node.js API Development Masterclass</h5><span class="course-rating"><i class="fa-solid fa-star"></i> 4.7 (1,320)</span></div>
+      </a>
+      <a href="course-details.html" class="related-course-mini">
+        <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=200&q=80" alt="">
+        <div><h5>Git &amp; GitHub for Teams</h5><span class="course-rating"><i class="fa-solid fa-star"></i> 4.5 (410)</span></div>
+      </a>
+      <a href="course-details.html" class="related-course-mini">
+        <img src="https://images.unsplash.com/photo-1561070791-2526d30994b5?w=200&q=80" alt="">
+        <div><h5>UI/UX Design Fundamentals</h5><span class="course-rating"><i class="fa-solid fa-star"></i> 4.9 (1,870)</span></div>
+      </a>
+    </aside>
+
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-bottom" style="border-top:none; padding-top:0;">
+      <span>© <span data-year></span> Project 8. All rights reserved.</span>
+      <span>Made for learners everywhere.</span>
+    </div>
+  </div>
+</footer>
+
+<button class="back-to-top" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+<script src="js/theme.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
