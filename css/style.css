@@ -569,7 +569,6 @@ textarea {
 
 @media (max-width: 500px) {
   .topbar { padding: 0 12px; }
-  .brand span.name { display: none; }
   section { padding: 44px 0; }
   .page-header { padding: 110px 0 28px; }
   .course-hero { padding: 110px 0 32px; }
