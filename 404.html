@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Page Not Found — Cognify</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-left">
+    <button class="menu-btn" id="menuBtn" aria-label="Open menu"><i class="fa-solid fa-bars"></i></button>
+    <a href="index.html" class="brand">
+      <span class="brand-mark"><i class="fa-solid fa-bolt"></i></span>
+      <span class="name">Cognify</span>
+    </a>
+  </div>
+  <div class="topbar-right">
+    <button class="theme-toggle" aria-label="Toggle dark mode">
+      <i class="fa-solid fa-moon"></i>
+      <i class="fa-solid fa-sun"></i>
+    </button>
+  </div>
+</header>
+
+<div class="overlay" id="overlay"></div>
+
+<nav class="drawer" id="drawer">
+  <div class="drawer-head">
+    <a href="index.html" class="brand"><span class="brand-mark"><i class="fa-solid fa-bolt"></i></span><span>Cognify</span></a>
+    <button class="drawer-close" id="drawerClose" aria-label="Close menu"><i class="fa-solid fa-xmark"></i></button>
+  </div>
+  <ul class="drawer-links">
+    <li><a href="index.html"><i class="fa-solid fa-house"></i> Home</a></li>
+    <li><a href="courses.html"><i class="fa-solid fa-book"></i> Courses</a></li>
+  </ul>
+</nav>
+
+<div class="error-page">
+  <div>
+    <div class="error-code">404</div>
+    <h2 class="mb-16">This page took a wrong turn</h2>
+    <p style="max-width:420px; margin:0 auto 28px;">The page you're looking for doesn't exist or may have been moved. Let's get you back on track.</p>
+    <div class="flex gap-10" style="justify-content:center; flex-wrap:wrap;">
+      <a href="index.html" class="btn btn-primary"><i class="fa-solid fa-house"></i> Back to Home</a>
+      <a href="courses.html" class="btn btn-outline">Browse Courses</a>
+    </div>
+  </div>
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>

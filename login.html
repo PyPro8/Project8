@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Log In — Cognify</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-left">
+    <button class="menu-btn" id="menuBtn" aria-label="Open menu"><i class="fa-solid fa-bars"></i></button>
+    <a href="index.html" class="brand">
+      <span class="brand-mark"><i class="fa-solid fa-bolt"></i></span>
+      <span class="name">Cognify</span>
+    </a>
+  </div>
+  <div class="topbar-right">
+    <button class="theme-toggle" aria-label="Toggle dark mode">
+      <i class="fa-solid fa-moon"></i>
+      <i class="fa-solid fa-sun"></i>
+    </button>
+  </div>
+</header>
+
+<div class="overlay" id="overlay"></div>
+
+<nav class="drawer" id="drawer">
+  <div class="drawer-head">
+    <a href="index.html" class="brand"><span class="brand-mark"><i class="fa-solid fa-bolt"></i></span><span>Cognify</span></a>
+    <button class="drawer-close" id="drawerClose" aria-label="Close menu"><i class="fa-solid fa-xmark"></i></button>
+  </div>
+  <ul class="drawer-links">
+    <li><a href="index.html"><i class="fa-solid fa-house"></i> Home</a></li>
+    <li><a href="courses.html"><i class="fa-solid fa-book"></i> Courses</a></li>
+    <li><a href="login.html"><i class="fa-solid fa-right-to-bracket"></i> Log In</a></li>
+    <li><a href="register.html"><i class="fa-solid fa-user-plus"></i> Sign Up</a></li>
+  </ul>
+</nav>
+
+<div class="auth-wrap">
+  <div class="auth-box">
+    <a href="index.html" class="brand"><span class="brand-mark"><i class="fa-solid fa-bolt"></i></span><span>Cognify</span></a>
+    <h1>Welcome back</h1>
+    <p class="sub">Log in to continue your learning journey.</p>
+
+    <form id="loginForm" novalidate>
+      <div class="form-group">
+        <label for="email">Email Address</label>
+        <div class="input-wrap">
+          <i class="fa-solid fa-envelope"></i>
+          <input type="email" id="email" placeholder="you@example.com">
+        </div>
+        <div class="form-error"></div>
+      </div>
+
+      <div class="form-group">
+        <label for="password">Password</label>
+        <div class="input-wrap">
+          <i class="fa-solid fa-lock"></i>
+          <input type="password" id="password" placeholder="••••••••">
+          <i class="fa-solid fa-eye toggle-pw"></i>
+        </div>
+        <div class="form-error"></div>
+      </div>
+
+      <div class="between-row">
+        <label class="checkbox-row"><input type="checkbox"> Remember me</label>
+        <a href="#" style="color:var(--primary); font-size:0.85rem; font-weight:600;">Forgot password?</a>
+      </div>
+
+      <button type="submit" class="btn btn-primary btn-block">Log In</button>
+    </form>
+
+    <p class="auth-switch">Don't have an account? <a href="register.html" style="color:var(--primary); font-weight:600;">Sign up free</a></p>
+  </div>
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>

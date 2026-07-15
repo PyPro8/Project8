@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Student Dashboard — Cognify</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-left">
+    <button class="menu-btn" id="menuBtn" aria-label="Open menu"><i class="fa-solid fa-bars"></i></button>
+    <a href="index.html" class="brand">
+      <span class="brand-mark"><i class="fa-solid fa-bolt"></i></span>
+      <span class="name">Cognify</span>
+    </a>
+  </div>
+  <div class="topbar-right">
+    <button class="theme-toggle" aria-label="Toggle dark mode">
+      <i class="fa-solid fa-moon"></i>
+      <i class="fa-solid fa-sun"></i>
+    </button>
+    <a href="profile.html" class="user-chip">
+      <img src="https://i.pravatar.cc/64?img=15" alt="Etoro Effiong">
+      <span>Etoro</span>
+    </a>
+  </div>
+</header>
+
+<div class="overlay" id="overlay"></div>
+
+<nav class="drawer" id="drawer">
+  <div class="drawer-head">
+    <a href="index.html" class="brand"><span class="brand-mark"><i class="fa-solid fa-bolt"></i></span><span>Cognify</span></a>
+    <button class="drawer-close" id="drawerClose" aria-label="Close menu"><i class="fa-solid fa-xmark"></i></button>
+  </div>
+  <ul class="drawer-links">
+    <li><a href="index.html"><i class="fa-solid fa-house"></i> Home</a></li>
+    <li><a href="courses.html"><i class="fa-solid fa-book"></i> Courses</a></li>
+    <li><a href="student-dashboard.html"><i class="fa-solid fa-gauge"></i> Dashboard</a></li>
+    <li><a href="assignments.html"><i class="fa-solid fa-file-pen"></i> Assignments</a></li>
+    <li><a href="progress.html"><i class="fa-solid fa-chart-pie"></i> Progress</a></li>
+    <li><a href="profile.html"><i class="fa-solid fa-user"></i> Profile</a></li>
+  </ul>
+  <div class="drawer-foot">
+    <a href="login.html" class="btn btn-outline btn-block">Log Out</a>
+  </div>
+</nav>
+
+<div class="dash-wrap">
+  <main class="dash-main">
+    <div class="container" style="padding:0;">
+
+      <div class="dash-top">
+        <div>
+          <h1 style="font-size:1.5rem;">Welcome back, Etoro 👋</h1>
+          <p>Here's what's happening with your learning today.</p>
+        </div>
+      </div>
+
+      <div class="welcome-card">
+        <div>
+          <h2 style="color:#fff; font-size:1.3rem;">Continue "Complete JavaScript" course</h2>
+          <p>You're 68% through Module 4: Asynchronous JavaScript. Keep the momentum going.</p>
+        </div>
+        <a href="course-details.html" class="btn">Resume Learning</a>
+      </div>
+
+      <div class="stat-grid">
+        <div class="stat-card">
+          <div class="stat-icon"><i class="fa-solid fa-book-open"></i></div>
+          <div class="stat-value">6</div>
+          <div class="stat-label">Enrolled Courses</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon"><i class="fa-solid fa-circle-check"></i></div>
+          <div class="stat-value">3</div>
+          <div class="stat-label">Completed Courses</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon"><i class="fa-solid fa-clock"></i></div>
+          <div class="stat-value">142h</div>
+          <div class="stat-label">Hours Learned</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon"><i class="fa-solid fa-certificate"></i></div>
+          <div class="stat-value">3</div>
+          <div class="stat-label">Certificates Earned</div>
+        </div>
+      </div>
+
+      <div class="dash-section">
+        <div class="dash-section-head"><h3>Continue Learning</h3><a href="courses.html" class="see-all">View all</a></div>
+        <div class="grid">
+          <div class="card course-card">
+            <div class="course-thumb"><img src="https://images.unsplash.com/photo-1517180102446-f3ece451e9d8?w=500&q=80" alt=""></div>
+            <div class="course-body">
+              <h4 class="course-title">Complete JavaScript: Zero to Full-Stack</h4>
+              <div class="progress-bar"><div class="progress-fill" style="width:68%;"></div></div>
+              <div class="progress-label"><span>68% complete</span><span>Module 4/6</span></div>
+            </div>
+          </div>
+          <div class="card course-card">
+            <div class="course-thumb"><img src="https://images.unsplash.com/photo-1561070791-2526d30994b5?w=500&q=80" alt=""></div>
+            <div class="course-body">
+              <h4 class="course-title">UI/UX Design Fundamentals</h4>
+              <div class="progress-bar"><div class="progress-fill" style="width:42%;"></div></div>
+              <div class="progress-label"><span>42% complete</span><span>Module 2/5</span></div>
+            </div>
+          </div>
+          <div class="card course-card">
+            <div class="course-thumb"><img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?w=500&q=80" alt=""></div>
+            <div class="course-body">
+              <h4 class="course-title">Solar Power Systems Design</h4>
+              <div class="progress-bar"><div class="progress-fill" style="width:21%;"></div></div>
+              <div class="progress-label"><span>21% complete</span><span>Module 1/4</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="dash-section">
+        <div class="dash-section-head"><h3>Enrolled Courses</h3><a href="courses.html" class="see-all">Browse more</a></div>
+
+        <div class="list-row">
+          <img class="thumb" src="https://images.unsplash.com/photo-1517180102446-f3ece451e9d8?w=200&q=80" alt="">
+          <div class="info">
+            <h4>Complete JavaScript: Zero to Full-Stack</h4>
+            <div class="progress-bar" style="max-width:220px;"><div class="progress-fill" style="width:68%;"></div></div>
+          </div>
+          <a href="course-details.html" class="btn btn-outline btn-sm">Continue</a>
+        </div>
+
+        <div class="list-row">
+          <img class="thumb" src="https://images.unsplash.com/photo-1561070791-2526d30994b5?w=200&q=80" alt="">
+          <div class="info">
+            <h4>UI/UX Design Fundamentals</h4>
+            <div class="progress-bar" style="max-width:220px;"><div class="progress-fill" style="width:42%;"></div></div>
+          </div>
+          <a href="course-details.html" class="btn btn-outline btn-sm">Continue</a>
+        </div>
+
+        <div class="list-row">
+          <img class="thumb" src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=200&q=80" alt="">
+          <div class="info">
+            <h4>Digital Marketing & Growth Strategy</h4>
+            <div class="progress-bar" style="max-width:220px;"><div class="progress-fill" style="width:100%;"></div></div>
+          </div>
+          <a href="course-details.html" class="btn btn-outline btn-sm">Review</a>
+        </div>
+      </div>
+
+      <div class="grid" style="grid-template-columns:1fr;">
+        <div class="dash-section">
+          <div class="dash-section-head"><h3>Upcoming Assignments</h3></div>
+
+          <div class="list-row">
+            <div class="date-box"><strong>18</strong><span>Jul</span></div>
+            <div class="info"><h4>Build a REST API with Node.js</h4><p>Complete JavaScript course</p></div>
+            <span class="badge badge-warning">Due soon</span>
+          </div>
+          <div class="list-row">
+            <div class="date-box"><strong>22</strong><span>Jul</span></div>
+            <div class="info"><h4>Wireframe a Mobile App Flow</h4><p>UI/UX Design Fundamentals</p></div>
+            <span class="badge badge-info">Upcoming</span>
+          </div>
+          <div class="list-row">
+            <div class="date-box"><strong>29</strong><span>Jul</span></div>
+            <div class="info"><h4>Solar Load Calculation Report</h4><p>Solar Power Systems Design</p></div>
+            <span class="badge badge-info">Upcoming</span>
+          </div>
+        </div>
+
+        <div class="dash-section">
+          <div class="dash-section-head"><h3>Recent Activity</h3></div>
+          <div class="card" style="padding:6px 18px;">
+            <div class="activity-row"><i class="fa-solid fa-circle-check"></i><div>Completed lesson <strong>"Promises & Async/Await"</strong> · 2 hours ago</div></div>
+            <div class="activity-row"><i class="fa-solid fa-star"></i><div>Left a review on <strong>UI/UX Design Fundamentals</strong> · Yesterday</div></div>
+            <div class="activity-row"><i class="fa-solid fa-certificate"></i><div>Earned certificate for <strong>Digital Marketing</strong> · 3 days ago</div></div>
+            <div class="activity-row"><i class="fa-solid fa-file-pen"></i><div>Submitted assignment <strong>"CSS Grid Layout"</strong> · 5 days ago</div></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cognify — Learn Without Limits</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-left">
+    <button class="menu-btn" id="menuBtn" aria-label="Open menu"><i class="fa-solid fa-bars"></i></button>
+    <a href="index.html" class="brand">
+      <span class="brand-mark"><i class="fa-solid fa-bolt"></i></span>
+      <span class="name">Cognify</span>
+    </a>
+  </div>
+  <div class="topbar-right">
+    <div class="topbar-auth">
+      <a href="login.html" class="btn btn-outline btn-sm">Log In</a>
+      <a href="register.html" class="btn btn-primary btn-sm">Sign Up</a>
+    </div>
+    <button class="theme-toggle" aria-label="Toggle dark mode">
+      <i class="fa-solid fa-moon"></i>
+      <i class="fa-solid fa-sun"></i>
+    </button>
+  </div>
+</header>
+
+<div class="overlay" id="overlay"></div>
+
+<nav class="drawer" id="drawer">
+  <div class="drawer-head">
+    <a href="index.html" class="brand">
+      <span class="brand-mark"><i class="fa-solid fa-bolt"></i></span>
+      <span>Cognify</span>
+    </a>
+    <button class="drawer-close" id="drawerClose" aria-label="Close menu"><i class="fa-solid fa-xmark"></i></button>
+  </div>
+  <ul class="drawer-links">
+    <li><a href="index.html"><i class="fa-solid fa-house"></i> Home</a></li>
+    <li><a href="courses.html"><i class="fa-solid fa-book"></i> Courses</a></li>
+    <li><a href="student-dashboard.html"><i class="fa-solid fa-gauge"></i> Student Dashboard</a></li>
+    <li><a href="instructor-dashboard.html"><i class="fa-solid fa-chalkboard-user"></i> Instructor Dashboard</a></li>
+    <li><a href="assignments.html"><i class="fa-solid fa-file-pen"></i> Assignments</a></li>
+    <li><a href="progress.html"><i class="fa-solid fa-chart-pie"></i> Progress</a></li>
+    <li><a href="profile.html"><i class="fa-solid fa-user"></i> Profile</a></li>
+  </ul>
+  <div class="drawer-foot">
+    <a href="login.html" class="btn btn-outline btn-block">Log In</a>
+    <a href="register.html" class="btn btn-primary btn-block">Sign Up</a>
+  </div>
+</nav>
+
+<main>
+
+  <section style="padding:100px 0 60px;">
+    <div class="container grid" style="grid-template-columns:1fr; align-items:center;">
+      <div>
+        <span class="eyebrow"><i class="fa-solid fa-sparkles"></i> 1,200+ free courses</span>
+        <h1>Learn skills that move your career forward</h1>
+        <p style="max-width:520px; margin-top:14px;">Cognify connects you with expert instructors teaching real-world software engineering, design, business and renewable energy skills — completely free, at your own pace.</p>
+        <div class="flex gap-10 flex-wrap mt-24">
+          <a href="courses.html" class="btn btn-primary">Explore Courses <i class="fa-solid fa-arrow-right"></i></a>
+          <a href="register.html" class="btn btn-outline">Become an Instructor</a>
+        </div>
+      </div>
+      <div>
+        <div class="card" style="overflow:hidden; border-radius:16px;">
+          <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=700&q=80" alt="Student learning online" style="aspect-ratio:4/3; object-fit:cover;">
+        </div>
+        <div class="card flex items-center gap-10" style="padding:14px 18px; margin-top:-30px; margin-left:20px; max-width:260px; position:relative;">
+          <div class="stat-icon" style="background:var(--success); color:#063;"><i class="fa-solid fa-chart-line"></i></div>
+          <div><strong style="display:block; font-size:0.95rem;">92% completion rate</strong><span style="font-size:0.76rem; color:var(--text-light);">Across all courses</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="section-title"><span class="eyebrow">Handpicked</span><h2>Featured Courses</h2></div>
+      <div class="grid" id="featuredCourses"></div>
+    </div>
+  </section>
+
+  <section style="background:var(--surface-alt);">
+    <div class="container">
+      <div class="section-title center"><span class="eyebrow">Browse</span><h2>Explore Top Categories</h2><p>Find the right path across in-demand fields, from code to clean energy.</p></div>
+      <div class="grid" id="categoryGrid"></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="section-title center"><span class="eyebrow">Meet the educators</span><h2>Learn From Industry Practitioners</h2><p>Every instructor on Cognify ships real products before they teach them.</p></div>
+      <div class="grid" id="instructorGrid"></div>
+    </div>
+  </section>
+
+  <section style="background:var(--surface-alt);">
+    <div class="container grid" style="grid-template-columns:1fr; align-items:center;">
+      <div class="card" style="overflow:hidden; border-radius:16px;">
+        <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?w=700&q=80" alt="Team collaborating" style="aspect-ratio:4/3; object-fit:cover;">
+      </div>
+      <div>
+        <span class="eyebrow">Why Cognify</span>
+        <h2 style="margin-bottom:22px;">Built for learners who want to build, not just watch</h2>
+        <div class="flex gap-10" style="align-items:flex-start; margin-bottom:20px;">
+          <div class="stat-icon" style="flex-shrink:0;"><i class="fa-solid fa-code"></i></div>
+          <div><h4>Project-based curriculum</h4><p>Every course ends in a portfolio-ready build, not just a quiz.</p></div>
+        </div>
+        <div class="flex gap-10" style="align-items:flex-start; margin-bottom:20px;">
+          <div class="stat-icon" style="flex-shrink:0;"><i class="fa-solid fa-infinity"></i></div>
+          <div><h4>100% free, always</h4><p>No hidden fees, no subscriptions — every course is free to enroll.</p></div>
+        </div>
+        <div class="flex gap-10" style="align-items:flex-start;">
+          <div class="stat-icon" style="flex-shrink:0;"><i class="fa-solid fa-certificate"></i></div>
+          <div><h4>Certificates included</h4><p>Share proof of completion directly to LinkedIn in one click.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="background:var(--primary); color:#fff; text-align:center;">
+    <div class="container grid" style="grid-template-columns:repeat(auto-fit, minmax(140px, 1fr));">
+      <div><strong style="font-size:clamp(1.6rem,4vw,2.2rem); font-weight:700; display:block;">1,200+</strong><span style="opacity:0.85; font-size:0.85rem;">Free courses</span></div>
+      <div><strong style="font-size:clamp(1.6rem,4vw,2.2rem); font-weight:700; display:block;">48K+</strong><span style="opacity:0.85; font-size:0.85rem;">Active learners</span></div>
+      <div><strong style="font-size:clamp(1.6rem,4vw,2.2rem); font-weight:700; display:block;">320+</strong><span style="opacity:0.85; font-size:0.85rem;">Expert instructors</span></div>
+      <div><strong style="font-size:clamp(1.6rem,4vw,2.2rem); font-weight:700; display:block;">92%</strong><span style="opacity:0.85; font-size:0.85rem;">Completion rate</span></div>
+    </div>
+  </section>
+
+  <section id="testimonials">
+    <div class="container">
+      <div class="section-title center"><span class="eyebrow">Testimonials</span><h2>Loved by learners everywhere</h2></div>
+      <div class="card" style="padding:32px; text-align:center; max-width:640px; margin:0 auto;">
+        <div style="color:var(--warning); margin-bottom:14px;"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+        <p style="color:var(--text); font-size:1.02rem; margin-bottom:16px;">"Cognify helped me transition from customer support into frontend development in four months — completely free. The projects felt like real client work."</p>
+        <img src="https://i.pravatar.cc/60?img=32" alt="" style="width:50px; height:50px; border-radius:50%; margin:0 auto 10px;">
+        <strong>Amaka Chukwu</strong>
+        <p style="font-size:0.8rem;">Frontend Developer</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div style="background:var(--primary); color:#fff; text-align:center; padding:46px 24px; border-radius:16px;">
+        <h2 style="color:#fff;">Ready to start learning?</h2>
+        <p style="color:rgba(255,255,255,0.85); max-width:460px; margin:12px auto 24px;">Join thousands of learners building real skills with Cognify today. No credit card, no fees — ever.</p>
+        <a href="register.html" class="btn" style="background:#fff; color:var(--primary-dark);">Create Free Account</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col footer-brand">
+        <a href="index.html" class="brand"><span class="brand-mark"><i class="fa-solid fa-bolt"></i></span><span>Cognify</span></a>
+        <p>A free online learning platform for practitioners who want to build, not just watch.</p>
+        <div class="social-row">
+          <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#"><i class="fa-brands fa-twitter"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Platform</h4>
+        <ul><li><a href="courses.html">Courses</a></li><li><a href="instructor-dashboard.html">Teach on Cognify</a></li><li><a href="#testimonials">Reviews</a></li></ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul><li><a href="#">About Us</a></li><li><a href="#">Careers</a></li><li><a href="#">Contact</a></li></ul>
+      </div>
+      <div class="footer-col">
+        <h4>Support</h4>
+        <ul><li><a href="#">Help Center</a></li><li><a href="#">Terms</a></li><li><a href="404.html">404 Page</a></li></ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span class="year"></span> Cognify. All rights reserved.</span>
+      <span>Made for learners everywhere.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script>
+  var courses = [
+    { title: "Complete JavaScript: From Zero to Full-Stack", cat: "Development", instructor: "Femi Adeyemi", avatar: "https://i.pravatar.cc/40?img=11", rating: 4.8, reviews: 2140, duration: "32h", img: "https://images.unsplash.com/photo-1517180102446-f3ece451e9d8?w=500&q=80" },
+    { title: "UI/UX Design Fundamentals with Figma", cat: "Design", instructor: "Grace Ibe", avatar: "https://i.pravatar.cc/40?img=48", rating: 4.9, reviews: 1870, duration: "18h", img: "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=500&q=80" },
+    { title: "Solar Power Systems Design & Installation", cat: "Energy", instructor: "Tunde Bakare", avatar: "https://i.pravatar.cc/40?img=13", rating: 4.7, reviews: 640, duration: "24h", img: "https://images.unsplash.com/photo-1509391366360-2e959784a276?w=500&q=80" },
+    { title: "Digital Marketing & Growth Strategy", cat: "Business", instructor: "Ifeoma Nwosu", avatar: "https://i.pravatar.cc/40?img=25", rating: 4.6, reviews: 980, duration: "14h", img: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=500&q=80" }
+  ];
+
+  document.getElementById('featuredCourses').innerHTML = courses.map(function (c) {
+    return '<a href="course-details.html" class="card course-card">' +
+      '<div class="course-thumb"><img src="' + c.img + '" alt="' + c.title + '"><span class="course-free-tag">FREE</span></div>' +
+      '<div class="course-body">' +
+        '<span class="course-cat">' + c.cat + '</span>' +
+        '<h3 class="course-title">' + c.title + '</h3>' +
+        '<div class="course-instructor"><img src="' + c.avatar + '" alt=""> ' + c.instructor + '</div>' +
+        '<div class="course-meta">' +
+          '<span class="rating"><i class="fa-solid fa-star"></i> ' + c.rating + ' <span>(' + c.reviews + ')</span></span>' +
+          '<span><i class="fa-regular fa-clock"></i> ' + c.duration + '</span>' +
+        '</div>' +
+        '<span class="btn btn-primary btn-sm btn-block">Enroll Free</span>' +
+      '</div></a>';
+  }).join('');
+
+  var categories = [
+    { name: "Development", icon: "fa-code", count: 312 },
+    { name: "Design", icon: "fa-pen-nib", count: 184 },
+    { name: "Business", icon: "fa-briefcase", count: 156 },
+    { name: "Renewable Energy", icon: "fa-solar-panel", count: 92 }
+  ];
+
+  document.getElementById('categoryGrid').innerHTML = categories.map(function (c) {
+    return '<a href="courses.html" class="card" style="text-align:center; padding:26px 14px;">' +
+      '<div class="stat-icon" style="margin:0 auto 12px; width:52px; height:52px;"><i class="fa-solid ' + c.icon + '"></i></div>' +
+      '<h4 style="font-size:0.9rem;">' + c.name + '</h4>' +
+      '<p style="font-size:0.76rem; margin-top:4px;">' + c.count + ' courses</p>' +
+    '</a>';
+  }).join('');
+
+  var instructors = [
+    { name: "Femi Adeyemi", role: "Full-Stack Engineer", students: "12,400", courses: 8, avatar: "https://i.pravatar.cc/150?img=11" },
+    { name: "Grace Ibe", role: "Product Designer", students: "9,800", courses: 6, avatar: "https://i.pravatar.cc/150?img=48" },
+    { name: "Tunde Bakare", role: "Solar Systems Engineer", students: "5,200", courses: 4, avatar: "https://i.pravatar.cc/150?img=13" }
+  ];
+
+  document.getElementById('instructorGrid').innerHTML = instructors.map(function (i) {
+    return '<div class="card" style="text-align:center; padding:26px 18px;">' +
+      '<img src="' + i.avatar + '" alt="' + i.name + '" style="width:76px; height:76px; border-radius:50%; object-fit:cover; margin:0 auto 14px;">' +
+      '<h4 style="font-size:0.95rem;">' + i.name + '</h4>' +
+      '<p style="font-size:0.8rem; margin:4px 0 12px;">' + i.role + '</p>' +
+      '<div class="flex justify-between" style="font-size:0.74rem; color:var(--text-light); padding-top:12px; border-top:1px solid var(--border);"><span>' + i.students + ' students</span><span>' + i.courses + ' courses</span></div>' +
+    '</div>';
+  }).join('');
+</script>
+</body>
+</html>

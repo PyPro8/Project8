@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Assignments — Cognify</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-left">
+    <button class="menu-btn" id="menuBtn" aria-label="Open menu"><i class="fa-solid fa-bars"></i></button>
+    <a href="index.html" class="brand">
+      <span class="brand-mark"><i class="fa-solid fa-bolt"></i></span>
+      <span class="name">Cognify</span>
+    </a>
+  </div>
+  <div class="topbar-right">
+    <button class="theme-toggle" aria-label="Toggle dark mode">
+      <i class="fa-solid fa-moon"></i>
+      <i class="fa-solid fa-sun"></i>
+    </button>
+    <a href="profile.html" class="user-chip">
+      <img src="https://i.pravatar.cc/64?img=15" alt="Etoro Effiong">
+      <span>Etoro</span>
+    </a>
+  </div>
+</header>
+
+<div class="overlay" id="overlay"></div>
+
+<nav class="drawer" id="drawer">
+  <div class="drawer-head">
+    <a href="index.html" class="brand"><span class="brand-mark"><i class="fa-solid fa-bolt"></i></span><span>Cognify</span></a>
+    <button class="drawer-close" id="drawerClose" aria-label="Close menu"><i class="fa-solid fa-xmark"></i></button>
+  </div>
+  <ul class="drawer-links">
+    <li><a href="index.html"><i class="fa-solid fa-house"></i> Home</a></li>
+    <li><a href="student-dashboard.html"><i class="fa-solid fa-gauge"></i> Dashboard</a></li>
+    <li><a href="assignments.html"><i class="fa-solid fa-file-pen"></i> Assignments</a></li>
+    <li><a href="progress.html"><i class="fa-solid fa-chart-pie"></i> Progress</a></li>
+    <li><a href="profile.html"><i class="fa-solid fa-user"></i> Profile</a></li>
+  </ul>
+</nav>
+
+<section class="page-header">
+  <div class="container">
+    <div class="breadcrumb"><a href="student-dashboard.html">Dashboard</a> <i class="fa-solid fa-chevron-right"></i> <span>Assignments</span></div>
+    <h1>Your Assignments</h1>
+    <p>Track submissions, due dates, and feedback across all enrolled courses.</p>
+  </div>
+</section>
+
+<div class="container" style="padding:36px 0 70px;">
+
+  <div class="assign-filters">
+    <button class="chip active">All (6)</button>
+    <button class="chip">Pending (3)</button>
+    <button class="chip">Submitted (2)</button>
+    <button class="chip">Graded (1)</button>
+  </div>
+
+  <div class="assign-grid">
+
+    <div class="assign-card">
+      <div class="assign-top">
+        <div><div class="assign-tag">Complete JavaScript</div><h3>Build a REST API with Node.js</h3></div>
+        <span class="badge badge-warning">Pending</span>
+      </div>
+      <p>Create a fully functional REST API with CRUD endpoints, using Express.</p>
+      <div class="assign-meta">
+        <span><i class="fa-regular fa-calendar"></i> Due Jul 18, 2026</span>
+        <span><i class="fa-regular fa-clock"></i> 4 days left</span>
+      </div>
+      <div class="assign-footer">
+        <span style="font-size:0.8rem; color:var(--text-light);">15% of final grade</span>
+        <button class="btn btn-primary btn-sm" data-toast="Assignment submitted">Submit</button>
+      </div>
+    </div>
+
+    <div class="assign-card">
+      <div class="assign-top">
+        <div><div class="assign-tag">UI/UX Design</div><h3>Wireframe a Mobile App Flow</h3></div>
+        <span class="badge badge-info">Upcoming</span>
+      </div>
+      <p>Design low-fidelity wireframes for a 5-screen onboarding flow using Figma.</p>
+      <div class="assign-meta">
+        <span><i class="fa-regular fa-calendar"></i> Due Jul 22, 2026</span>
+        <span><i class="fa-regular fa-clock"></i> 8 days left</span>
+      </div>
+      <div class="assign-footer">
+        <span style="font-size:0.8rem; color:var(--text-light);">10% of final grade</span>
+        <button class="btn btn-primary btn-sm" data-toast="Assignment submitted">Submit</button>
+      </div>
+    </div>
+
+    <div class="assign-card">
+      <div class="assign-top">
+        <div><div class="assign-tag">Solar Power Systems</div><h3>Solar Load Calculation Report</h3></div>
+        <span class="badge badge-info">Upcoming</span>
+      </div>
+      <p>Calculate load requirements and propose a solar + battery system for a home.</p>
+      <div class="assign-meta">
+        <span><i class="fa-regular fa-calendar"></i> Due Jul 29, 2026</span>
+        <span><i class="fa-regular fa-clock"></i> 15 days left</span>
+      </div>
+      <div class="assign-footer">
+        <span style="font-size:0.8rem; color:var(--text-light);">20% of final grade</span>
+        <button class="btn btn-primary btn-sm" data-toast="Assignment submitted">Submit</button>
+      </div>
+    </div>
+
+    <div class="assign-card">
+      <div class="assign-top">
+        <div><div class="assign-tag">Complete JavaScript</div><h3>CSS Grid Layout Challenge</h3></div>
+        <span class="badge badge-success">Submitted</span>
+      </div>
+      <p>Recreate a magazine-style layout using CSS Grid, matching the design spec.</p>
+      <div class="assign-meta">
+        <span><i class="fa-regular fa-calendar"></i> Submitted Jul 9, 2026</span>
+        <span><i class="fa-solid fa-paperclip"></i> layout-challenge.zip</span>
+      </div>
+      <div class="assign-footer">
+        <span style="font-size:0.8rem; color:var(--text-light);">Awaiting review</span>
+        <button class="btn btn-outline btn-sm" disabled>Submitted</button>
+      </div>
+    </div>
+
+    <div class="assign-card">
+      <div class="assign-top">
+        <div><div class="assign-tag">Digital Marketing</div><h3>Create a Content Calendar</h3></div>
+        <span class="badge badge-success">Graded</span>
+      </div>
+      <p>Build a one-month content calendar for a fictional brand across 3 platforms.</p>
+      <div class="assign-meta">
+        <span><i class="fa-regular fa-calendar"></i> Submitted Jul 2, 2026</span>
+        <span><i class="fa-solid fa-star" style="color:var(--warning);"></i> Score: 92/100</span>
+      </div>
+      <div class="assign-footer">
+        <span style="font-size:0.8rem; color:var(--text-light);">"Excellent structure." — Ifeoma</span>
+        <button class="btn btn-outline btn-sm">View Feedback</button>
+      </div>
+    </div>
+
+    <div class="assign-card">
+      <div class="assign-top">
+        <div><div class="assign-tag">Complete JavaScript</div><h3>Async/Await Practice Set</h3></div>
+        <span class="badge badge-warning">Pending</span>
+      </div>
+      <p>Solve 10 async programming exercises involving fetch requests and error handling.</p>
+      <div class="assign-meta">
+        <span><i class="fa-regular fa-calendar"></i> Due Jul 20, 2026</span>
+        <span><i class="fa-regular fa-clock"></i> 6 days left</span>
+      </div>
+      <div class="assign-footer">
+        <span style="font-size:0.8rem; color:var(--text-light);">8% of final grade</span>
+        <button class="btn btn-primary btn-sm" data-toast="Assignment submitted">Submit</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-bottom" style="border-top:none; padding-top:0;">
+      <span>© <span class="year"></span> Cognify. All rights reserved.</span>
+      <span>Made for learners everywhere.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

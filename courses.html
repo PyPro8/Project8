@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Browse Courses — Cognify</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-left">
+    <button class="menu-btn" id="menuBtn" aria-label="Open menu"><i class="fa-solid fa-bars"></i></button>
+    <a href="index.html" class="brand">
+      <span class="brand-mark"><i class="fa-solid fa-bolt"></i></span>
+      <span class="name">Cognify</span>
+    </a>
+  </div>
+  <div class="topbar-right">
+    <div class="topbar-auth">
+      <a href="login.html" class="btn btn-outline btn-sm">Log In</a>
+      <a href="register.html" class="btn btn-primary btn-sm">Sign Up</a>
+    </div>
+    <button class="theme-toggle" aria-label="Toggle dark mode">
+      <i class="fa-solid fa-moon"></i>
+      <i class="fa-solid fa-sun"></i>
+    </button>
+  </div>
+</header>
+
+<div class="overlay" id="overlay"></div>
+
+<nav class="drawer" id="drawer">
+  <div class="drawer-head">
+    <a href="index.html" class="brand"><span class="brand-mark"><i class="fa-solid fa-bolt"></i></span><span>Cognify</span></a>
+    <button class="drawer-close" id="drawerClose" aria-label="Close menu"><i class="fa-solid fa-xmark"></i></button>
+  </div>
+  <ul class="drawer-links">
+    <li><a href="index.html"><i class="fa-solid fa-house"></i> Home</a></li>
+    <li><a href="courses.html"><i class="fa-solid fa-book"></i> Courses</a></li>
+    <li><a href="student-dashboard.html"><i class="fa-solid fa-gauge"></i> Student Dashboard</a></li>
+    <li><a href="instructor-dashboard.html"><i class="fa-solid fa-chalkboard-user"></i> Instructor Dashboard</a></li>
+  </ul>
+  <div class="drawer-foot">
+    <a href="login.html" class="btn btn-outline btn-block">Log In</a>
+    <a href="register.html" class="btn btn-primary btn-block">Sign Up</a>
+  </div>
+</nav>
+
+<section class="page-header">
+  <div class="container">
+    <div class="breadcrumb"><a href="index.html">Home</a> <i class="fa-solid fa-chevron-right"></i> <span>Courses</span></div>
+    <h1>Browse All Courses</h1>
+    <p>1,200+ free courses across development, design, business and renewable energy.</p>
+  </div>
+</section>
+
+<div class="container">
+  <div class="courses-layout">
+
+    <aside class="filters">
+      <h3 style="margin-bottom:16px;">Filters</h3>
+
+      <div class="filter-group">
+        <h4>Category</h4>
+        <label class="filter-check"><input type="checkbox" checked> Development</label>
+        <label class="filter-check"><input type="checkbox"> Design</label>
+        <label class="filter-check"><input type="checkbox"> Business</label>
+        <label class="filter-check"><input type="checkbox"> Renewable Energy</label>
+      </div>
+
+      <div class="filter-group">
+        <h4>Level</h4>
+        <label class="filter-check"><input type="checkbox"> Beginner</label>
+        <label class="filter-check"><input type="checkbox"> Intermediate</label>
+        <label class="filter-check"><input type="checkbox"> Advanced</label>
+      </div>
+
+      <div class="filter-group">
+        <h4>Rating</h4>
+        <label class="filter-check"><input type="checkbox"> 4.5 &amp; up</label>
+        <label class="filter-check"><input type="checkbox"> 4.0 &amp; up</label>
+      </div>
+
+      <button class="btn btn-outline btn-block">Clear Filters</button>
+    </aside>
+
+    <div class="courses-main">
+      <div class="search-bar">
+        <input type="text" placeholder="Search courses, instructors, topics…">
+        <button class="btn btn-primary btn-sm">Search</button>
+      </div>
+
+      <div class="chip-row">
+        <button class="chip active">All</button>
+        <button class="chip">Development</button>
+        <button class="chip">Design</button>
+        <button class="chip">Business</button>
+        <button class="chip">Renewable Energy</button>
+      </div>
+
+      <p style="font-size:0.9rem; color:var(--text-light); margin-bottom:20px;">Showing 8 of 1,200 free courses</p>
+
+      <div class="grid" id="allCoursesGrid"></div>
+    </div>
+
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-bottom" style="border-top:none; padding-top:0;">
+      <span>© <span class="year"></span> Cognify. All rights reserved.</span>
+      <span>Made for learners everywhere.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script>
+  var allCourses = [
+    { title: "Complete JavaScript: From Zero to Full-Stack", cat: "Development", instructor: "Femi Adeyemi", avatar: "https://i.pravatar.cc/40?img=11", rating: 4.8, reviews: 2140, duration: "32h", img: "https://images.unsplash.com/photo-1517180102446-f3ece451e9d8?w=500&q=80" },
+    { title: "UI/UX Design Fundamentals with Figma", cat: "Design", instructor: "Grace Ibe", avatar: "https://i.pravatar.cc/40?img=48", rating: 4.9, reviews: 1870, duration: "18h", img: "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=500&q=80" },
+    { title: "Solar Power Systems Design & Installation", cat: "Renewable Energy", instructor: "Tunde Bakare", avatar: "https://i.pravatar.cc/40?img=13", rating: 4.7, reviews: 640, duration: "24h", img: "https://images.unsplash.com/photo-1509391366360-2e959784a276?w=500&q=80" },
+    { title: "Digital Marketing & Growth Strategy", cat: "Business", instructor: "Ifeoma Nwosu", avatar: "https://i.pravatar.cc/40?img=25", rating: 4.6, reviews: 980, duration: "14h", img: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=500&q=80" },
+    { title: "Node.js API Development Masterclass", cat: "Development", instructor: "Femi Adeyemi", avatar: "https://i.pravatar.cc/40?img=11", rating: 4.7, reviews: 1320, duration: "20h", img: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=500&q=80" },
+    { title: "Git & GitHub for Teams", cat: "Development", instructor: "Chidi Obi", avatar: "https://i.pravatar.cc/40?img=33", rating: 4.5, reviews: 410, duration: "8h", img: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=500&q=80" },
+    { title: "Battery Storage & Inverter Systems", cat: "Renewable Energy", instructor: "Tunde Bakare", avatar: "https://i.pravatar.cc/40?img=13", rating: 4.8, reviews: 290, duration: "16h", img: "https://images.unsplash.com/photo-1497440001374-f26997328c1b?w=500&q=80" },
+    { title: "Small Business Financial Planning", cat: "Business", instructor: "Ngozi Eze", avatar: "https://i.pravatar.cc/40?img=20", rating: 4.6, reviews: 720, duration: "12h", img: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=500&q=80" }
+  ];
+
+  document.getElementById('allCoursesGrid').innerHTML = allCourses.map(function (c) {
+    return '<a href="course-details.html" class="card course-card">' +
+      '<div class="course-thumb"><img src="' + c.img + '" alt="' + c.title + '"><span class="course-free-tag">FREE</span></div>' +
+      '<div class="course-body">' +
+        '<span class="course-cat">' + c.cat + '</span>' +
+        '<h3 class="course-title">' + c.title + '</h3>' +
+        '<div class="course-instructor"><img src="' + c.avatar + '" alt=""> ' + c.instructor + '</div>' +
+        '<div class="course-meta">' +
+          '<span class="rating"><i class="fa-solid fa-star"></i> ' + c.rating + ' <span>(' + c.reviews + ')</span></span>' +
+          '<span><i class="fa-regular fa-clock"></i> ' + c.duration + '</span>' +
+        '</div>' +
+        '<span class="btn btn-primary btn-sm btn-block">Enroll Free</span>' +
+      '</div></a>';
+  }).join('');
+</script>
+</body>
+</html>

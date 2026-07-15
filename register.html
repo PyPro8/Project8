@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Create Account — Cognify</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-left">
+    <button class="menu-btn" id="menuBtn" aria-label="Open menu"><i class="fa-solid fa-bars"></i></button>
+    <a href="index.html" class="brand">
+      <span class="brand-mark"><i class="fa-solid fa-bolt"></i></span>
+      <span class="name">Cognify</span>
+    </a>
+  </div>
+  <div class="topbar-right">
+    <button class="theme-toggle" aria-label="Toggle dark mode">
+      <i class="fa-solid fa-moon"></i>
+      <i class="fa-solid fa-sun"></i>
+    </button>
+  </div>
+</header>
+
+<div class="overlay" id="overlay"></div>
+
+<nav class="drawer" id="drawer">
+  <div class="drawer-head">
+    <a href="index.html" class="brand"><span class="brand-mark"><i class="fa-solid fa-bolt"></i></span><span>Cognify</span></a>
+    <button class="drawer-close" id="drawerClose" aria-label="Close menu"><i class="fa-solid fa-xmark"></i></button>
+  </div>
+  <ul class="drawer-links">
+    <li><a href="index.html"><i class="fa-solid fa-house"></i> Home</a></li>
+    <li><a href="courses.html"><i class="fa-solid fa-book"></i> Courses</a></li>
+    <li><a href="login.html"><i class="fa-solid fa-right-to-bracket"></i> Log In</a></li>
+    <li><a href="register.html"><i class="fa-solid fa-user-plus"></i> Sign Up</a></li>
+  </ul>
+</nav>
+
+<div class="auth-wrap">
+  <div class="auth-box">
+    <a href="index.html" class="brand"><span class="brand-mark"><i class="fa-solid fa-bolt"></i></span><span>Cognify</span></a>
+    <h1>Create your account</h1>
+    <p class="sub">Free forever. No credit card required.</p>
+
+    <form id="registerForm" novalidate>
+
+      <div class="role-row">
+        <label class="role-option active">
+          <input type="radio" name="role" value="student" checked>
+          <i class="fa-solid fa-graduation-cap"></i>
+          <span>I'm a Student</span>
+        </label>
+        <label class="role-option">
+          <input type="radio" name="role" value="instructor">
+          <i class="fa-solid fa-chalkboard-user"></i>
+          <span>I'm an Instructor</span>
+        </label>
+      </div>
+
+      <div class="form-group">
+        <label for="fullname">Full Name</label>
+        <div class="input-wrap">
+          <i class="fa-solid fa-user"></i>
+          <input type="text" id="fullname" placeholder="Your full name">
+        </div>
+        <div class="form-error"></div>
+      </div>
+
+      <div class="form-group">
+        <label for="regEmail">Email Address</label>
+        <div class="input-wrap">
+          <i class="fa-solid fa-envelope"></i>
+          <input type="email" id="regEmail" placeholder="you@example.com">
+        </div>
+        <div class="form-error"></div>
+      </div>
+
+      <div class="form-group">
+        <label for="regPassword">Password</label>
+        <div class="input-wrap">
+          <i class="fa-solid fa-lock"></i>
+          <input type="password" id="regPassword" placeholder="Min. 6 characters">
+          <i class="fa-solid fa-eye toggle-pw"></i>
+        </div>
+        <div class="form-error"></div>
+      </div>
+
+      <div class="form-group">
+        <label for="regConfirm">Confirm Password</label>
+        <div class="input-wrap">
+          <i class="fa-solid fa-lock"></i>
+          <input type="password" id="regConfirm" placeholder="Re-enter password">
+          <i class="fa-solid fa-eye toggle-pw"></i>
+        </div>
+        <div class="form-error"></div>
+      </div>
+
+      <div class="between-row">
+        <label class="checkbox-row"><input type="checkbox" id="agreeTerms"> I agree to the <a href="#" style="color:var(--primary);">Terms</a> &amp; <a href="#" style="color:var(--primary);">Privacy Policy</a></label>
+      </div>
+
+      <button type="submit" class="btn btn-primary btn-block">Create Account</button>
+    </form>
+
+    <p class="auth-switch">Already have an account? <a href="login.html" style="color:var(--primary); font-weight:600;">Log in</a></p>
+  </div>
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>

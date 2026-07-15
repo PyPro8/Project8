@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Progress — Cognify</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-left">
+    <button class="menu-btn" id="menuBtn" aria-label="Open menu"><i class="fa-solid fa-bars"></i></button>
+    <a href="index.html" class="brand">
+      <span class="brand-mark"><i class="fa-solid fa-bolt"></i></span>
+      <span class="name">Cognify</span>
+    </a>
+  </div>
+  <div class="topbar-right">
+    <button class="theme-toggle" aria-label="Toggle dark mode">
+      <i class="fa-solid fa-moon"></i>
+      <i class="fa-solid fa-sun"></i>
+    </button>
+    <a href="profile.html" class="user-chip">
+      <img src="https://i.pravatar.cc/64?img=15" alt="Etoro Effiong">
+      <span>Etoro</span>
+    </a>
+  </div>
+</header>
+
+<div class="overlay" id="overlay"></div>
+
+<nav class="drawer" id="drawer">
+  <div class="drawer-head">
+    <a href="index.html" class="brand"><span class="brand-mark"><i class="fa-solid fa-bolt"></i></span><span>Cognify</span></a>
+    <button class="drawer-close" id="drawerClose" aria-label="Close menu"><i class="fa-solid fa-xmark"></i></button>
+  </div>
+  <ul class="drawer-links">
+    <li><a href="index.html"><i class="fa-solid fa-house"></i> Home</a></li>
+    <li><a href="student-dashboard.html"><i class="fa-solid fa-gauge"></i> Dashboard</a></li>
+    <li><a href="assignments.html"><i class="fa-solid fa-file-pen"></i> Assignments</a></li>
+    <li><a href="progress.html"><i class="fa-solid fa-chart-pie"></i> Progress</a></li>
+    <li><a href="profile.html"><i class="fa-solid fa-user"></i> Profile</a></li>
+  </ul>
+</nav>
+
+<section class="page-header">
+  <div class="container">
+    <div class="breadcrumb"><a href="student-dashboard.html">Dashboard</a> <i class="fa-solid fa-chevron-right"></i> <span>Progress</span></div>
+    <h1>Your Learning Progress</h1>
+    <p>See how far you've come across every course, certificate, and milestone.</p>
+  </div>
+</section>
+
+<div class="container" style="padding:36px 0 70px;">
+
+  <div class="progress-grid">
+    <div class="card ring-card">
+      <div class="ring">
+        <svg width="170" height="170" viewBox="0 0 170 170">
+          <circle class="bg" cx="85" cy="85" r="74"></circle>
+          <circle class="fg" cx="85" cy="85" r="74" data-pct="68"></circle>
+        </svg>
+        <div class="ring-value"><strong>68%</strong><span>Overall</span></div>
+      </div>
+      <h3 class="mt-16">Overall Completion</h3>
+      <p>Across all 6 enrolled courses</p>
+    </div>
+
+    <div>
+      <div class="mini-stat-grid mb-24">
+        <div class="card mini-stat">
+          <i class="fa-solid fa-book-open"></i>
+          <div><h4>Completed Lessons</h4><p>216 of 318 total lessons</p></div>
+        </div>
+        <div class="card mini-stat">
+          <i class="fa-solid fa-file-pen"></i>
+          <div><h4>Assignments Done</h4><p>9 of 12 assignments</p></div>
+        </div>
+        <div class="card mini-stat">
+          <i class="fa-solid fa-certificate"></i>
+          <div><h4>Certificates</h4><p>3 earned, 3 in progress</p></div>
+        </div>
+      </div>
+
+      <div class="card" style="padding:22px;">
+        <h3 class="mb-16">Course Progress</h3>
+
+        <div class="list-row">
+          <img class="thumb" src="https://images.unsplash.com/photo-1517180102446-f3ece451e9d8?w=200&q=80" alt="">
+          <div class="info"><h4>Complete JavaScript: Zero to Full-Stack</h4><div class="progress-bar" style="max-width:220px;"><div class="progress-fill" style="width:68%;"></div></div></div>
+          <strong style="color:var(--primary);">68%</strong>
+        </div>
+        <div class="list-row">
+          <img class="thumb" src="https://images.unsplash.com/photo-1561070791-2526d30994b5?w=200&q=80" alt="">
+          <div class="info"><h4>UI/UX Design Fundamentals</h4><div class="progress-bar" style="max-width:220px;"><div class="progress-fill" style="width:42%;"></div></div></div>
+          <strong style="color:var(--primary);">42%</strong>
+        </div>
+        <div class="list-row">
+          <img class="thumb" src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=200&q=80" alt="">
+          <div class="info"><h4>Digital Marketing & Growth Strategy</h4><div class="progress-bar" style="max-width:220px;"><div class="progress-fill" style="width:100%;"></div></div></div>
+          <strong style="color:var(--primary);">100%</strong>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="dash-section">
+    <div class="dash-section-head"><h3>Certificates</h3></div>
+    <div class="grid">
+      <div class="card cert-card">
+        <i class="fa-solid fa-award"></i>
+        <h4>Digital Marketing & Growth Strategy</h4>
+        <p>Completed Jul 11, 2026</p>
+        <button class="btn btn-outline btn-sm" data-toast="Certificate downloaded"><i class="fa-solid fa-download"></i> Download</button>
+      </div>
+      <div class="card cert-card">
+        <i class="fa-solid fa-award"></i>
+        <h4>HTML & CSS Foundations</h4>
+        <p>Completed May 2, 2026</p>
+        <button class="btn btn-outline btn-sm" data-toast="Certificate downloaded"><i class="fa-solid fa-download"></i> Download</button>
+      </div>
+      <div class="card cert-card">
+        <i class="fa-solid fa-award"></i>
+        <h4>Intro to Renewable Energy</h4>
+        <p>Completed Mar 18, 2026</p>
+        <button class="btn btn-outline btn-sm" data-toast="Certificate downloaded"><i class="fa-solid fa-download"></i> Download</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="dash-section">
+    <div class="dash-section-head"><h3>Achievements</h3></div>
+    <div class="card badge-grid">
+      <div class="achievement">
+        <div class="achievement-icon"><i class="fa-solid fa-fire"></i></div>
+        <h5>7-Day Streak</h5><span>Unlocked</span>
+      </div>
+      <div class="achievement">
+        <div class="achievement-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+        <h5>First Certificate</h5><span>Unlocked</span>
+      </div>
+      <div class="achievement">
+        <div class="achievement-icon"><i class="fa-solid fa-bolt"></i></div>
+        <h5>Fast Learner</h5><span>Unlocked</span>
+      </div>
+      <div class="achievement locked">
+        <div class="achievement-icon"><i class="fa-solid fa-lock"></i></div>
+        <h5>30-Day Streak</h5><span>18 days to go</span>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-bottom" style="border-top:none; padding-top:0;">
+      <span>© <span class="year"></span> Cognify. All rights reserved.</span>
+      <span>Made for learners everywhere.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

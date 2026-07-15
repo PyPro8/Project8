@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Instructor Dashboard — Cognify</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-left">
+    <button class="menu-btn" id="menuBtn" aria-label="Open menu"><i class="fa-solid fa-bars"></i></button>
+    <a href="index.html" class="brand">
+      <span class="brand-mark"><i class="fa-solid fa-bolt"></i></span>
+      <span class="name">Cognify</span>
+    </a>
+  </div>
+  <div class="topbar-right">
+    <button class="theme-toggle" aria-label="Toggle dark mode">
+      <i class="fa-solid fa-moon"></i>
+      <i class="fa-solid fa-sun"></i>
+    </button>
+    <a href="profile.html" class="user-chip">
+      <img src="https://i.pravatar.cc/64?img=11" alt="Femi Adeyemi">
+      <span>Femi</span>
+    </a>
+  </div>
+</header>
+
+<div class="overlay" id="overlay"></div>
+
+<nav class="drawer" id="drawer">
+  <div class="drawer-head">
+    <a href="index.html" class="brand"><span class="brand-mark"><i class="fa-solid fa-bolt"></i></span><span>Cognify</span></a>
+    <button class="drawer-close" id="drawerClose" aria-label="Close menu"><i class="fa-solid fa-xmark"></i></button>
+  </div>
+  <ul class="drawer-links">
+    <li><a href="index.html"><i class="fa-solid fa-house"></i> Home</a></li>
+    <li><a href="courses.html"><i class="fa-solid fa-book"></i> Courses</a></li>
+    <li><a href="instructor-dashboard.html"><i class="fa-solid fa-chalkboard-user"></i> Instructor Dashboard</a></li>
+    <li><a href="assignments.html"><i class="fa-solid fa-file-pen"></i> Assignments</a></li>
+    <li><a href="profile.html"><i class="fa-solid fa-user"></i> Profile</a></li>
+  </ul>
+  <div class="drawer-foot">
+    <a href="login.html" class="btn btn-outline btn-block">Log Out</a>
+  </div>
+</nav>
+
+<div class="dash-wrap">
+  <main class="dash-main">
+    <div class="container" style="padding:0;">
+
+      <div class="dash-top">
+        <div>
+          <h1 style="font-size:1.5rem;">Instructor Overview</h1>
+          <p>Track your courses, students, and assignments in one place.</p>
+        </div>
+        <a href="#create-course" class="btn btn-primary"><i class="fa-solid fa-circle-plus"></i> Create Course</a>
+      </div>
+
+      <div class="stat-grid">
+        <div class="stat-card">
+          <div class="stat-icon"><i class="fa-solid fa-book-open"></i></div>
+          <div class="stat-value">8</div>
+          <div class="stat-label">Published Courses</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon"><i class="fa-solid fa-users"></i></div>
+          <div class="stat-value">12,400</div>
+          <div class="stat-label">Total Students</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon"><i class="fa-solid fa-star"></i></div>
+          <div class="stat-value">4.8</div>
+          <div class="stat-label">Average Rating</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon"><i class="fa-solid fa-chart-line"></i></div>
+          <div class="stat-value">+14%</div>
+          <div class="stat-label">Growth This Month</div>
+        </div>
+      </div>
+
+      <div class="dash-section">
+        <div class="dash-section-head"><h3>Assignment Overview</h3></div>
+        <div class="list-row">
+          <div class="stat-icon"><i class="fa-solid fa-inbox"></i></div>
+          <div class="info"><h4>Build a REST API with Node.js</h4><p>24 submissions pending review</p></div>
+          <span class="badge badge-warning">24 new</span>
+        </div>
+        <div class="list-row">
+          <div class="stat-icon"><i class="fa-solid fa-inbox"></i></div>
+          <div class="info"><h4>Wireframe a Mobile App Flow</h4><p>9 submissions pending review</p></div>
+          <span class="badge badge-info">9 new</span>
+        </div>
+        <div class="list-row">
+          <div class="stat-icon"><i class="fa-solid fa-circle-check"></i></div>
+          <div class="info"><h4>CSS Grid Layout Challenge</h4><p>All submissions graded</p></div>
+          <span class="badge badge-success">Complete</span>
+        </div>
+      </div>
+
+      <div class="dash-section" id="create-course">
+        <div class="dash-section-head"><h3>Create a New Course</h3></div>
+        <div class="card" style="padding:26px;">
+          <form id="createCourseForm" class="create-form">
+            <div class="form-group full">
+              <label for="courseTitle">Course Title</label>
+              <div class="input-wrap">
+                <i class="fa-solid fa-heading"></i>
+                <input type="text" id="courseTitle" placeholder="e.g. Advanced React Patterns">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="courseCategory">Category</label>
+              <div class="input-wrap">
+                <i class="fa-solid fa-layer-group"></i>
+                <select id="courseCategory">
+                  <option>Development</option>
+                  <option>Design</option>
+                  <option>Business</option>
+                  <option>Renewable Energy</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="courseLevel">Level</label>
+              <div class="input-wrap">
+                <i class="fa-solid fa-signal"></i>
+                <select id="courseLevel">
+                  <option>Beginner</option>
+                  <option>Intermediate</option>
+                  <option>Advanced</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group full">
+              <label for="courseDesc">Description</label>
+              <textarea id="courseDesc" placeholder="What will students learn in this course?"></textarea>
+            </div>
+            <div class="upload-box">
+              <i class="fa-solid fa-cloud-arrow-up"></i>
+              <p><strong>Click to upload</strong> a course thumbnail</p>
+            </div>
+            <div class="full">
+              <button type="submit" class="btn btn-primary">Save Course</button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div class="dash-section">
+        <div class="dash-section-head"><h3>Manage Courses</h3></div>
+
+        <div class="manage-row">
+          <img src="https://images.unsplash.com/photo-1517180102446-f3ece451e9d8?w=200&q=80" alt="">
+          <div class="info"><h4>Complete JavaScript: Zero to Full-Stack</h4><p style="font-size:0.76rem; color:var(--text-light);">Published</p></div>
+          <div class="stat"><strong>2,140</strong><span>Students</span></div>
+          <div class="stat"><strong>4.8</strong><span>Rating</span></div>
+          <div class="row-actions">
+            <button class="icon-btn" title="Edit"><i class="fa-solid fa-pen"></i></button>
+            <button class="icon-btn delete-course" title="Delete"><i class="fa-solid fa-trash"></i></button>
+          </div>
+        </div>
+
+        <div class="manage-row">
+          <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=200&q=80" alt="">
+          <div class="info"><h4>Node.js API Development Masterclass</h4><p style="font-size:0.76rem; color:var(--text-light);">Published</p></div>
+          <div class="stat"><strong>1,320</strong><span>Students</span></div>
+          <div class="stat"><strong>4.7</strong><span>Rating</span></div>
+          <div class="row-actions">
+            <button class="icon-btn" title="Edit"><i class="fa-solid fa-pen"></i></button>
+            <button class="icon-btn delete-course" title="Delete"><i class="fa-solid fa-trash"></i></button>
+          </div>
+        </div>
+
+        <div class="manage-row">
+          <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=200&q=80" alt="">
+          <div class="info"><h4>Git &amp; GitHub for Teams</h4><p style="font-size:0.76rem; color:var(--text-light);">Draft</p></div>
+          <div class="stat"><strong>0</strong><span>Students</span></div>
+          <div class="stat"><strong>—</strong><span>Rating</span></div>
+          <div class="row-actions">
+            <button class="icon-btn" title="Edit"><i class="fa-solid fa-pen"></i></button>
+            <button class="icon-btn delete-course" title="Delete"><i class="fa-solid fa-trash"></i></button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>
